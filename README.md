@@ -1,5 +1,4 @@
 # Pink Scarf
-Local Integrated System Archtecture
 
 Pink Scarf is a simple practice to create astonishing web applications 
 
