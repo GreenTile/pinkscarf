@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>pink scarf</title>
+</head>
+<body>
+
+    <div id="app">
+        <input type="text" id="input" v-model="message">
+        <p>The value of input is {{ message }}.</p>
+    </div>
+
+    <script src="https://unpkg.com/vue@2.5.16/dist/vue.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data = {
+                message: "Hello World!"
+            };
+        });
+    </script>
+
+</body>
+</html>

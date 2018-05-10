@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>pink scarf</title>
+</head>
+<body>
+
+    <div id="app">
+      <ul>
+        <li v-for="name in names" v-text="name"></li>
+      </ul>
+
+      <input id="input" type="text" v-model="newName" >
+      <input id="button" type="button" v-on:click="addName" value="add name">
+    </div>
+
+    <script src="https://unpkg.com/vue@2.5.16/dist/vue.js"></script>
+    <script>
+
+        var app = new Vue({
+            el: '#app',
+            data:{
+              newName: '',
+              names:['joe', 'mary', 'jane', 'jack']
+            },
+            methods:{
+              addName(){
+                if(this.newName != ''){
+                  this.names.push(this.newName);
+                  this.newName = '';
+                }
+              }
+            }
+            // mounted(){
+              // document.querySelector('#button').addEventListener('click', () => {
+              //     let name = document.querySelector('#input');
+              //     app.names.push(name.value);
+              //     name.value='';
+              // });
+              // alert('ready');
+            // }
+          });
+
+
+    </script>
+
+</body>
+</html>
