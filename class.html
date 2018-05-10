@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>pink scarf</title>
+    <style>
+    .clicked{
+      background-color: blue;
+    }
+    </style>
+</head>
+<body>
+
+    <div id="app">
+
+      <button :class="{'clicked': clicked }" @click="clickTrigger">hove me!</button>
+      <button :disabled="clicked" @click="clickTrigger">hove me!</button>
+
+    </div>
+
+    <script src="https://unpkg.com/vue@2.5.16/dist/vue.js"></script>
+    <script>
+
+        var app = new Vue({
+            el: '#app',
+            data:{
+              className: 'blue-back',
+              clicked:false
+            },
+            methods:{
+              clickTrigger(){
+                this.clicked = !this.clicked
+              }
+            }
+          });
+
+
+    </script>
+
+</body>
+</html>
