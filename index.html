@@ -1,12 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>pink scarf</title>
 </head>
+
 <body>
-    <h1>hello world!</h1>
+    <div id="app">
+        <h1>hello world!</h1>
+        <input type="text" id="input" v-model="message">
+        <p>The value of input is {{ message }}.</p>
+    </div>
+    
+    <script src="https://unpkg.com/vue@2.5.16/dist/vue.js"></script>
+    <script>
+    
+        let data = {
+
+            message: "Hello World!"
+        };
+
+        // document.querySelector("input").value = data.message;        
+        new Vue({
+            
+            el: '#app',
+            data: data
+
+        });
+    </script>
+
+
 </body>
 </html>
