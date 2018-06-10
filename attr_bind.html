@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>pink scarf</title>
+    <style>
+
+    .text-red{
+      color: red;
+    }
+    .text-purple{
+      color:purple;
+    }
+    .back-purple{
+      background-color: purple;
+    }
+    .back-pink{
+      background-color: pink;
+    }
+
+    </style>
+</head>
+<body>
+
+    <div id="app">
+
+      <button :title="title">{{text}}</button>
+      <h1 :class="className" >this is a heading</h1>
+      <br>
+      <button :class="{ 'back-purple': clicked, 'back-pink':!clicked }" @click="toggleClicked">click me</button>
+      <button :disabled="clicked">Can u click me?</button>
+    </div>
+
+    <script src="https://unpkg.com/vue@2.5.16/dist/vue.js"></script>
+    <script>
+
+        var app = new Vue({
+            el: '#app',
+            data:{
+              title: "the title is set through JS",
+              text: "hover over me",
+              className: "text-red",
+              clicked: false
+            },
+            methods:{
+              toggleClicked(){
+                this.clicked = !this.clicked;
+              }
+            }
+
+          });
+
+
+    </script>
+
+</body>
+</html>
