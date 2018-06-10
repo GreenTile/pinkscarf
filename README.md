@@ -1,5 +1,5 @@
 # Pink Scarf
-<img src="https://raw.githubusercontent.com/GreenTile/pinkscarf/master/pinkscarflogo.jpg">
+<img src="https://raw.githubusercontent.com/GreenTile/pinkscarf/master/pinkscarflogo.jpg" style="width: 150px;align:center">
 Pink Scarf is a simple practice to create astonishing web applications 
 
 both in what appears on sight and beyond
